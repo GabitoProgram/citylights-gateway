@@ -182,12 +182,6 @@ export class ProxyService {
       }
 
       console.log('📋 Headers enviados:', Object.keys(requestHeaders));
-
-      // Configurar la petición
-      // Si el path ya incluye /api/, no lo agregamos de nuevo
-      const finalUrl = path.startsWith('/api/') 
-        ? `${serviceUrl}${path}` 
-        : `${serviceUrl}/api${path}`;
       
       const config: AxiosRequestConfig = {
         method: method as any,
