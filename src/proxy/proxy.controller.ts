@@ -476,7 +476,7 @@ export class ProxyController {
     
     try {
       // Verificar si es una solicitud de PDF
-      if (path.includes('/pdf/')) {
+      if (path.includes('/pdf/') || path.includes('/generar-pdf')) {
         // Manejar como archivo binario
         const fileResponse = await this.proxyService.forwardFileRequest(
           'nomina',
